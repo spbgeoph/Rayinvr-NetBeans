@@ -1,0 +1,93 @@
+!
+!     version 1.3  Aug 1992
+!
+!     Jan 2015
+!     - increased pshot from 200 to 400
+!     - increased prayf from 30 to 60
+!     this allows r.in files to contain more phases and shots
+!     also seems to reduce segfaults.
+!
+!     parameter statement for RAYINVR
+!
+!     ----------------------------------------------------------------
+!
+      integer player,ppcntr,ptrap,pshot,prayf,ptrayf,ppray,pnrayf,		&
+             pray,prefl,preflt,pconv,pconvt,pnsmth,papois,pnvar,		&
+             prayi,ppvel,pncntr,picv,pinvel,prayt,pshot2,pfrefl,		&
+             ppfref,pn2pt,pnobsf,pr2pt,pcol,pxgrid,pzgrid,pitan,		&
+             pitan2,piray
+!
+      parameter (pi=3.141592654,  pi4=.785398163,   pi2=1.570796327,		&
+               pi34=2.35619449, pi18=57.29577951, pit2=-6.283185307)
+!
+      parameter(player=16, ppcntr=300,  ptrap=600,   pshot=400,			&
+               prayf=60, ptrayf=3000, ppray=500,  pnrayf=1000,			&
+               pray=100000, prefl=20,   preflt=150, pconv=20,			&
+               pconvt=100, pnsmth=500, papois=150, pnvar=1000,			&
+               prayi=90000, ppvel=300, pfrefl=20, ppfref=20,			&
+               pn2pt=15, pnobsf=1200, pcol=20, pxgrid=5000,			    &
+               pzgrid=2000, pitan=1000, piray=100)
+
+      parameter(pncntr=player+1, picv=player*ptrap*20, pinvel=player*2, &
+               pshot2=pshot*2, prayt=pshot2*prayf, pitan2=pitan*2,		&
+               pr2pt=pnrayf+(pn2pt-1)*pnobsf)
+
+!
+!     player - model layers
+!
+!     ppcntr - points defining a single model layer
+!              (must be a multiple of 10)
+!
+!     ppvel - points at which upper and lower layer velocities defined
+!             (must be a multiple of 10)
+!
+!     ptrap - trapezoids within a layer
+!
+!     pshot - shot points
+!
+!     prayf - ray groups for a single shot
+!
+!     ptrayf - ray groups for all shots
+!
+!     ppray - points defining a single ray
+!
+!     piray - intersections with model boundaries for a single ray
+!
+!     pnrayf - rays in a single group
+!
+!     pray - rays reaching the surface (not including the search mode)
+!
+!     prefl - reflecting boundaries for a single group
+!
+!     preflt - reflecting boundaries for all groups
+!
+!     pconv - converting boundaries for a single group
+!
+!     pconvt - converting boundaries for all groups
+!
+!     pnsmth - points defining smooth layer boundary
+!
+!     papois - blocks within which Poisson's ratio is altered
+!
+!     pnvar - model parameters varied in inversion
+!
+!     prayi - travel times used in inversion
+!
+!     pfrefl - floating refectors
+!
+!     ppfref - points defining a single floating reflector
+!
+!     pn2pt - iterations in two-point ray tracing search
+!
+!     pnobsf - travel times with the same integer code for a single shot
+!
+!     pcol - colours for ray groups and observed travel times
+!
+!     pxgrid - number of grid points in x-direction for output of uniformly
+!             sampled velocity model
+!
+!     pzgrid - number of grid points in z-direction for output of uniformly
+!             sampled velocity model
+!
+!     pitan - number of intervals at which tangent function is pre-evaluated
+!             and used for interpolation

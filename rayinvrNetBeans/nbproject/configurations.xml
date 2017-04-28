@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="SourceFiles"
+                   displayName="Исходные файлы"
+                   projectFiles="true">
+      <logicalFolder name="src" displayName="src" projectFiles="true">
+        <itemPath>src/adjpt.f95</itemPath>
+        <itemPath>src/atrc.f95</itemPath>
+        <itemPath>src/blkdat.f95</itemPath>
+        <itemPath>src/calmod.f95</itemPath>
+        <itemPath>src/hdw.f95</itemPath>
+        <itemPath>src/inv.f95</itemPath>
+        <itemPath>src/main.f95</itemPath>
+        <itemPath>src/misc.f95</itemPath>
+        <itemPath>src/nopltlib.f95</itemPath>
+        <itemPath>src/plt.f95</itemPath>
+        <itemPath>src/pltlib.f95</itemPath>
+        <itemPath>src/pltsub.f95</itemPath>
+        <itemPath>src/rayinvr.com</itemPath>
+        <itemPath>src/rayinvr.par</itemPath>
+        <itemPath>src/rngkta.f95</itemPath>
+        <itemPath>src/trc.f95</itemPath>
+        <itemPath>src/trcaux.f95</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles"
+                   displayName="Файлы заголовков"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Файлы ресурсов"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Файлы тестов"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Важные файлы"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>src</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>MinGW_pure|MinGW</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+      </compileType>
+      <item path="src/adjpt.f95" ex="false" tool="2" flavor2="0">
+        <fortranCompilerTool>
+          <commandLine>${OBJECTDIR}/src/trc.o</commandLine>
+        </fortranCompilerTool>
+      </item>
+      <item path="src/atrc.f95" ex="false" tool="2" flavor2="0">
+        <fortranCompilerTool>
+          <commandLine>${OBJECTDIR}/src/trc.o ${OBJECTDIR}/src/pltlib.o ${OBJECTDIR}/src/plt.o</commandLine>
+        </fortranCompilerTool>
+      </item>
+      <item path="src/blkdat.f95" ex="false" tool="2" flavor2="0">
+      </item>
+      <item path="src/calmod.f95" ex="false" tool="2" flavor2="0">
+        <fortranCompilerTool>
+          <commandLine>${OBJECTDIR}/src/inv.o ${OBJECTDIR}/src/misc.o</commandLine>
+        </fortranCompilerTool>
+      </item>
+      <item path="src/hdw.f95" ex="false" tool="2" flavor2="0">
+        <fortranCompilerTool>
+          <commandLine>${OBJECTDIR}/src/inv.o ${OBJECTDIR}/src/trcaux.o</commandLine>
+        </fortranCompilerTool>
+      </item>
+      <item path="src/inv.f95" ex="false" tool="2" flavor2="0">
+      </item>
+      <item path="src/main.f95" ex="false" tool="2" flavor2="0">
+        <fortranCompilerTool>
+          <commandLine>${OBJECTDIR}/src/calmod.o ${OBJECTDIR}/src/pltlib.o ${OBJECTDIR}/src/plt.o ${OBJECTDIR}/src/trc.o ${OBJECTDIR}/src/atrc.o</commandLine>
+        </fortranCompilerTool>
+      </item>
+      <item path="src/misc.f95" ex="false" tool="2" flavor2="0">
+        <fortranCompilerTool>
+          <commandLine>${OBJECTDIR}/src/trc.o</commandLine>
+        </fortranCompilerTool>
+      </item>
+      <item path="src/nopltlib.f95" ex="false" tool="2" flavor2="0">
+      </item>
+      <item path="src/plt.f95" ex="false" tool="2" flavor2="0">
+        <fortranCompilerTool>
+          <commandLine>${OBJECTDIR}/src/pltlib.o ${OBJECTDIR}/src/pltsub.o</commandLine>
+        </fortranCompilerTool>
+      </item>
+      <item path="src/pltlib.f95" ex="false" tool="2" flavor2="0">
+      </item>
+      <item path="src/pltsub.f95" ex="false" tool="2" flavor2="0">
+        <fortranCompilerTool>
+          <commandLine>${OBJECTDIR}/src/pltlib.o</commandLine>
+        </fortranCompilerTool>
+      </item>
+      <item path="src/rayinvr.com" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/rayinvr.par" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/rngkta.f95" ex="false" tool="2" flavor2="0">
+      </item>
+      <item path="src/trc.f95" ex="false" tool="2" flavor2="0">
+        <fortranCompilerTool>
+          <commandLine>${OBJECTDIR}/src/trcaux.o ${OBJECTDIR}/src/rngkta.o ${OBJECTDIR}/src/inv.o ${OBJECTDIR}/src/hdw.o</commandLine>
+        </fortranCompilerTool>
+      </item>
+      <item path="src/trcaux.f95" ex="false" tool="2" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>MinGW_pure|MinGW</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="src/adjpt.f95" ex="false" tool="2" flavor2="0">
+        <fortranCompilerTool>
+          <commandLine>${OBJECTDIR}/src/trc.o</commandLine>
+        </fortranCompilerTool>
+      </item>
+      <item path="src/atrc.f95" ex="false" tool="2" flavor2="0">
+        <fortranCompilerTool>
+          <commandLine>${OBJECTDIR}/src/pltlib.o</commandLine>
+        </fortranCompilerTool>
+      </item>
+      <item path="src/blkdat.f95" ex="false" tool="2" flavor2="0">
+      </item>
+      <item path="src/calmod.f95" ex="false" tool="2" flavor2="0">
+        <fortranCompilerTool>
+          <commandLine>${OBJECTDIR}/src/inv.o ${OBJECTDIR}/src/misc.o</commandLine>
+        </fortranCompilerTool>
+      </item>
+      <item path="src/hdw.f95" ex="false" tool="2" flavor2="0">
+        <fortranCompilerTool>
+          <commandLine>${OBJECTDIR}/src/inv.o ${OBJECTDIR}/src/misc.o</commandLine>
+        </fortranCompilerTool>
+      </item>
+      <item path="src/inv.f95" ex="false" tool="2" flavor2="0">
+      </item>
+      <item path="src/main.f95" ex="false" tool="2" flavor2="0">
+        <fortranCompilerTool>
+          <commandLine>${OBJECTDIR}/src/calmod.o ${OBJECTDIR}/src/pltlib.o ${OBJECTDIR}/src/pltsub.o ${OBJECTDIR}/src/trc.o ${OBJECTDIR}/src/atrc.</commandLine>
+        </fortranCompilerTool>
+      </item>
+      <item path="src/misc.f95" ex="false" tool="2" flavor2="0">
+      </item>
+      <item path="src/nopltlib.f95" ex="false" tool="2" flavor2="0">
+      </item>
+      <item path="src/plt.f95" ex="false" tool="2" flavor2="0">
+        <fortranCompilerTool>
+          <commandLine>${OBJECTDIR}/src/pltlib.o ${OBJECTDIR}/src/pltsub.o</commandLine>
+        </fortranCompilerTool>
+      </item>
+      <item path="src/pltlib.f95" ex="false" tool="2" flavor2="0">
+      </item>
+      <item path="src/pltsub.f95" ex="false" tool="2" flavor2="0">
+        <fortranCompilerTool>
+          <commandLine>${OBJECTDIR}/src/pltlib.o</commandLine>
+        </fortranCompilerTool>
+      </item>
+      <item path="src/rayinvr.com" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/rayinvr.par" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/rngkta.f95" ex="false" tool="2" flavor2="0">
+      </item>
+      <item path="src/trc.f95" ex="false" tool="2" flavor2="0">
+      </item>
+      <item path="src/trcaux.f95" ex="false" tool="2" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
